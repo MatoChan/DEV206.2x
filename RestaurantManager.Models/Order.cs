@@ -22,7 +22,7 @@ namespace RestaurantManager.Models
 
         public override string ToString()
         {
-            return String.Join(", ", Items.Select(i => i.Title));
+            return String.Join(Environment.NewLine, Items.Select(i => i.Title));
         }
     }
 }
