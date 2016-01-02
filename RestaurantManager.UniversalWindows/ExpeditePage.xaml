@@ -4,9 +4,13 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:RestaurantManager.UniversalWindows"
     xmlns:models="using:RestaurantManager.Models"
+    xmlns:extensions ="using:RestaurantManager.Extensions"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
+    <Page.Resources>
+        <extensions:BoolToColorConverter x:Key="BoolToColorConverter" TrueColor="Red" FalseColor="Transparent"/>
+    </Page.Resources>
     <Page.DataContext>
         <models:ExpediteDataManager />
     </Page.DataContext>
@@ -46,6 +50,11 @@
                                 <LineBreak/>
                                 <Run Text="{Binding SpecialRequests}"/>
                             </TextBlock>
+                            <Rectangle Grid.Row="2">
+                                <Rectangle.Fill>
+                                    <SolidColorBrush Color="{Binding Expedite, Converter={StaticResource BoolToColorConverter}}"/>
+                                </Rectangle.Fill>
+                            </Rectangle>
                             <Button  Grid.Row="2" Content="Delete" HorizontalAlignment="Center" FontSize="15"/>
                         </Grid>
                     </Grid> 
