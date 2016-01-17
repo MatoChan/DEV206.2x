@@ -8,6 +8,7 @@ namespace RestaurantManager.UniversalWindows
         public MainPage()
         {
             this.InitializeComponent();
+            ButtonSlider.Begin();
         }
 
         private void ExpeditePage_Click(object sender, RoutedEventArgs e)

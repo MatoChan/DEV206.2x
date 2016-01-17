@@ -33,6 +33,7 @@
             <RowDefinition Height="0.10*"/>
             <RowDefinition Height="0.10*"/>
         </Grid.RowDefinitions>
+        <ProgressRing Grid.Row="2" Grid.RowSpan="3" Grid.Column="0" IsActive="{Binding IsLoading}" Height="100" Width="100"/>
         <TextBlock Grid.Row="2" Grid.Column="1" Text="Special Requests:" />
         <TextBlock Grid.Row="2" Grid.Column="2" Text="Order Items:" />
         <TextBox x:Name="SpecialRequestTextBox" Grid.Row="3" Grid.Column="1" TextWrapping="Wrap" AcceptsReturn="True"/>
